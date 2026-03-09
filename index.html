@@ -1,89 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agri Tech 3.0 Hackathon</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<title>AgriTech 3.0 Hackathon</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+html{scroll-behavior:smooth}
 
-<link rel="stylesheet" href="css/style.css">
+body{
+background:linear-gradient(135deg,#d4f5d4,#f5fff5);
+overflow-x:hidden;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+/* NAVBAR */
 
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#0b3d0b;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+z-index:1000;
+}
+
+nav h2{color:white;font-weight:700}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#9be79b;
+}
+
+/* HERO */
+
+header{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1500382017468-9049fed747ef") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+color:white;
+padding-top:80px;
+position:relative;
+}
+
+header::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.4);
+}
+
+header *{position:relative;z-index:2}
+
+header h1{
+font-size:60px;
+animation:fadeDown 1.5s ease;
+}
+
+header p{
+font-size:22px;
+margin-top:10px;
+animation:fadeUp 1.5s ease;
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+border-radius:30px;
+background:#2e7d32;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#1b5e20;
+}
+
+/* SECTION */
+
+.section{
+padding:100px 10%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+color:#1b5e20;
+}
+
+/* CARD GRID */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+/* PODIUM */
+
+.podium{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+align-items:flex-end;
+}
+
+.podium div{
+width:120px;
+text-align:center;
+color:white;
+border-radius:10px;
+font-weight:bold;
+padding:10px;
+}
+
+.first{height:170px;background:#ffd700}
+.second{height:130px;background:#c0c0c0}
+.third{height:110px;background:#cd7f32}
+
+/* TIMELINE */
+
+.timeline{
+border-left:4px solid #2e7d32;
+padding-left:30px;
+max-width:700px;
+margin:auto;
+}
+
+.timeline div{
+margin-bottom:25px;
+}
+
+/* FAQ */
+
+.faq-item{
+margin-bottom:20px;
+}
+
+.faq-item h4{
+background:#a5d6a7;
+padding:12px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.faq-item p{
+display:none;
+padding:10px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+font-size:18px;
+line-height:35px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0b3d0b;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* DRONE */
+
+.drone{
+position:fixed;
+top:120px;
+font-size:40px;
+animation:fly 18s linear infinite;
+}
+
+@keyframes fly{
+0%{left:-100px}
+100%{left:110%}
+}
+
+/* FLOATING LEAVES */
+
+.leaf{
+position:absolute;
+font-size:22px;
+animation:leafFall 12s linear infinite;
+opacity:.7;
+}
+
+@keyframes leafFall{
+0%{transform:translateY(-100px) rotate(0)}
+100%{transform:translateY(110vh) rotate(360deg)}
+}
+
+/* FLOWERS CLICK */
+
+.flower{
+position:absolute;
+font-size:24px;
+pointer-events:none;
+animation:fall 2s forwards;
+}
+
+@keyframes fall{
+0%{opacity:1;transform:translateY(0)}
+100%{opacity:0;transform:translateY(200px) rotate(360deg)}
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-50px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(50px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<div class="drone">🚁</div>
 
-<nav class="navbar">
-
-<div class="logo">🌾 AGRITECH 3.0</div>
-
+<nav>
+<h2>AgriTech 3.0</h2>
 <ul>
-
-<li><a href="index.html">Home</a></li>
-<li><a href="prizes.html">Prizes</a></li>
-<li><a href="timeline.html">Timeline</a></li>
-<li><a href="guidelines.html">Guidelines</a></li>
-<li><a href="faq.html">FAQ</a></li>
-<li><a href="contact.html">Contact</a></li>
-
+<li><a href="#home">Home</a></li>
+<li><a href="#prizes">Prizes</a></li>
+<li><a href="#timeline">Timeline</a></li>
+<li><a href="#guidelines">Guidelines</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
-<!-- HERO SECTION -->
+<header id="home">
+<h1>Welcome to Agri Tech 3.0</h1>
+<p>Innovate for the Future of Agriculture</p>
+<p>Two Day Hackathon | 9 AM – 5 PM</p>
 
-<header class="hero">
-
-<video autoplay muted loop class="bg-video">
-<source src="https://cdn.coverr.co/videos/coverr-green-field-1563/1080p.mp4">
-</video>
-
-<div class="hero-content">
-
-<h1>Welcome to Agritech 3.0</h1>
-
-<p>Innovating the Future of Agriculture</p>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLScNYG7dmK_k1QLV5G2nhs3oUZlzXUcvSidIxrdl6mxjZzOWDQ/viewform">
-
-<button class="register">Register Now</button>
-
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScNYG7dmK_k1QLV5G2nhs3oUZlzXUcvSidIxrdl6mxjZzOWDQ/viewform?usp=header">
+<button>Register Now</button>
 </a>
-
-</div>
-
 </header>
 
-<!-- TRACTOR -->
+<section class="section" id="prizes">
+<h2>Thrilling Rewards</h2>
 
-<div class="tractor">🚜</div>
+<div class="podium">
+<div class="second">₹3000</div>
+<div class="first">₹3000</div>
+<div class="third">₹3000</div>
+</div>
+</section>
 
-<!-- SATELLITE -->
+<section class="section" id="timeline">
+<h2>Event Timeline</h2>
 
-<div class="satellite">🛰</div>
+<div class="timeline">
+<div><b>Day 1 Morning</b> – Idea Pitch</div>
+<div><b>Day 1 Afternoon</b> – Development</div>
+<div><b>Day 2 Morning</b> – Prototype Testing</div>
+<div><b>Day 2 Evening</b> – Final Judging</div>
+</div>
 
-<!-- GROWING CROPS -->
+</section>
 
-<section class="crops">
+<section class="section" id="guidelines">
+<h2>Team & Rules</h2>
 
-<div class="crop">🌱</div>
-<div class="crop">🌱</div>
-<div class="crop">🌱</div>
-<div class="crop">🌱</div>
+<div class="cards">
+<div class="card"><h3>Team Size</h3><p>2–4 students per team.</p></div>
+<div class="card"><h3>Topics</h3><p>Drones and IoT in Agriculture<br>Farm Implement Design<br>Water Quality Management</p></div>
+<div class="card"><h3>Rules</h3><p>Prototype or innovative concept must be presented.</p></div>
+</div>
+
+</section>
+
+<section class="section" id="faq">
+<h2>FAQ</h2>
+
+<div class="faq-item">
+<h4>Who can participate?</h4>
+<p>All college students interested in agriculture technology.</p>
+</div>
+
+<div class="faq-item">
+<h4>Is registration free?</h4>
+<p>Yes registration is free.</p>
+</div>
+
+</section>
+
+<section class="section contact" id="contact">
+<h2>Contact</h2>
+
+<p><b>Student Coordinator</b><br>
+S. Christopher – 8220083222</p>
+
+<p><b>Staff Coordinators</b><br>
+Mr. S. Satheesh Kumar – 8489715566<br>
+Dr. G. Kiruthika – 9080497721</p>
 
 </section>
 
 <footer>
-
-AgriTech 3.0 | Sustainable Agriculture Innovation
-
+Agri Tech 3.0 Hackathon | Innovation for Sustainable Agriculture
 </footer>
 
-<script src="js/script.js"></script>
+<script>
+
+/* FLOWERS ON CLICK */
+
+document.addEventListener("click",function(e){
+
+for(let i=0;i<8;i++){
+let flower=document.createElement("div")
+flower.className="flower"
+flower.innerHTML="🌸"
+flower.style.left=(e.pageX+Math.random()*60-30)+"px"
+flower.style.top=(e.pageY+Math.random()*60-30)+"px"
+document.body.appendChild(flower)
+setTimeout(()=>flower.remove(),2000)
+}
+
+})
+
+/* FAQ */
+
+document.querySelectorAll(".faq-item h4").forEach(q=>{
+q.onclick=()=>{
+let p=q.nextElementSibling
+p.style.display=p.style.display==="block"?"none":"block"
+}
+})
+
+/* FLOATING LEAVES */
+
+for(let i=0;i<10;i++){
+let leaf=document.createElement("div")
+leaf.className="leaf"
+leaf.innerHTML="🍃"
+leaf.style.left=Math.random()*100+"%"
+leaf.style.animationDuration=8+Math.random()*6+"s"
+document.body.appendChild(leaf)
+}
+
+</script>
 
 </body>
 </html>
