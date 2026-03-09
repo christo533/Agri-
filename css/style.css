@@ -1,0 +1,172 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+
+}
+
+.navbar ul{
+
+display:flex;
+list-style:none;
+gap:30px;
+
+}
+
+.navbar a{
+
+color:#00ff7f;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+
+}
+
+.navbar a:hover{
+
+color:white;
+transform:scale(1.2);
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+
+}
+
+.bg-video{
+
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+
+}
+
+.hero h1{
+
+font-size:60px;
+animation:fadeDown 2s;
+
+}
+
+.hero p{
+
+font-size:22px;
+margin-top:15px;
+
+}
+
+.register{
+
+margin-top:25px;
+padding:15px 40px;
+border:none;
+border-radius:30px;
+background:#00ff7f;
+color:black;
+font-size:18px;
+cursor:pointer;
+
+}
+
+/* TRACTOR */
+
+.tractor{
+
+position:absolute;
+bottom:20px;
+font-size:60px;
+animation:tractorMove 20s linear infinite;
+
+}
+
+@keyframes tractorMove{
+
+0%{left:-100px}
+100%{left:110%}
+
+}
+
+/* SATELLITE */
+
+.satellite{
+
+position:absolute;
+top:50px;
+font-size:50px;
+animation:satelliteMove 25s linear infinite;
+
+}
+
+@keyframes satelliteMove{
+
+0%{left:-100px}
+100%{left:110%}
+
+}
+
+/* CROPS */
+
+.crops{
+
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:100px;
+
+}
+
+.crop{
+
+font-size:50px;
+animation:growing 3s infinite alternate;
+
+}
+
+@keyframes growing{
+
+from{transform:scale(1)}
+to{transform:scale(1.5)}
+
+}
+
+footer{
+
+text-align:center;
+padding:40px;
+margin-top:100px;
+background:#021c0f;
+
+}
