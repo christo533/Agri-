@@ -1,398 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Agri Tech 3.0 Hackathon</title>
+<title>AgriTech 3.0 Hackathon</title>
+
+<link rel="stylesheet" href="css/style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<style>
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{
-background:linear-gradient(135deg,#d4f5d4,#f1fff1);
-overflow-x:hidden;
-scroll-behavior:smooth;
-}
-
-/* NAVBAR */
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#1b5e20;
-padding:15px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-}
-
-nav h2{
-color:white;
-}
-
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
-
-nav ul li a{
-color:white;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-nav ul li a:hover{
-color:#a5d6a7;
-}
-
-/* HERO */
-
-header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:url("https://images.unsplash.com/photo-1500382017468-9049fed747ef") center/cover;
-color:white;
-padding-top:80px;
-}
-
-header h1{
-font-size:60px;
-animation:fadeDown 1.5s;
-}
-
-header p{
-font-size:22px;
-margin-top:10px;
-animation:fadeUp 1.5s;
-}
-
-button{
-margin-top:30px;
-padding:15px 35px;
-border:none;
-border-radius:30px;
-background:#2e7d32;
-color:white;
-font-size:18px;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-transform:scale(1.1);
-background:#1b5e20;
-}
-
-/* SECTIONS */
-
-.section{
-padding:100px 12%;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-color:#1b5e20;
-}
-
-/* CARDS */
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.05);
-box-shadow:0 20px 40px rgba(0,0,0,0.2);
-}
-
-/* PRIZE PODIUM */
-
-.podium{
-display:flex;
-justify-content:center;
-align-items:flex-end;
-gap:30px;
-margin-top:40px;
-}
-
-.podium div{
-width:120px;
-text-align:center;
-background:#81c784;
-border-radius:10px;
-color:white;
-font-weight:bold;
-}
-
-.first{height:160px;background:#ffd700;}
-.second{height:120px;background:#c0c0c0;}
-.third{height:100px;background:#cd7f32;}
-
-/* TIMELINE */
-
-.timeline{
-border-left:4px solid #2e7d32;
-padding-left:30px;
-}
-
-.timeline div{
-margin-bottom:30px;
-}
-
-/* FAQ */
-
-.faq-item{
-margin-bottom:20px;
-}
-
-.faq-item h4{
-cursor:pointer;
-background:#a5d6a7;
-padding:10px;
-border-radius:6px;
-}
-
-.faq-item p{
-display:none;
-padding:10px;
-}
-
-/* CONTACT */
-
-.contact{
-text-align:center;
-line-height:40px;
-font-size:18px;
-}
-
-/* FOOTER */
-
-footer{
-background:#1b5e20;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-/* DRONE */
-
-.drone{
-position:fixed;
-top:120px;
-left:-200px;
-font-size:40px;
-animation:fly 20s linear infinite;
-}
-
-@keyframes fly{
-0%{left:-200px;}
-100%{left:110%;}
-}
-
-/* FLOWERS */
-
-.flower{
-position:absolute;
-font-size:24px;
-pointer-events:none;
-animation:fall 2s linear forwards;
-}
-
-@keyframes fall{
-0%{opacity:1;transform:translateY(0);}
-100%{opacity:0;transform:translateY(200px) rotate(360deg);}
-}
-
-/* ANIMATIONS */
-
-@keyframes fadeDown{
-from{opacity:0;transform:translateY(-40px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-</style>
 </head>
 
 <body>
 
-<div class="drone">🚁</div>
+<!-- NAVBAR -->
 
-<nav>
-<h2>AgriTech 3.0</h2>
+<nav class="navbar">
+
+<div class="logo">🌾 AGRITECH 3.0</div>
+
 <ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#prizes">Prizes</a></li>
-<li><a href="#timeline">Timeline</a></li>
-<li><a href="#guidelines">Guidelines</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#contact">Contact</a></li>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="prizes.html">Prizes</a></li>
+<li><a href="timeline.html">Timeline</a></li>
+<li><a href="guidelines.html">Guidelines</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html">Contact</a></li>
+
 </ul>
+
 </nav>
 
-<header id="home">
+<!-- HERO SECTION -->
 
-<h1>Welcome to Agri Tech 3.0</h1>
-<p>Innovate for the Future of Agriculture</p>
-<p>Two Day Hackathon | 9 AM – 5 PM</p>
+<header class="hero">
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLScNYG7dmK_k1QLV5G2nhs3oUZlzXUcvSidIxrdl6mxjZzOWDQ/viewform?usp=header">
-<button>Register Now</button>
+<video autoplay muted loop class="bg-video">
+<source src="https://cdn.coverr.co/videos/coverr-green-field-1563/1080p.mp4">
+</video>
+
+<div class="hero-content">
+
+<h1>Welcome to Agritech 3.0</h1>
+
+<p>Innovating the Future of Agriculture</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScNYG7dmK_k1QLV5G2nhs3oUZlzXUcvSidIxrdl6mxjZzOWDQ/viewform">
+
+<button class="register">Register Now</button>
+
 </a>
+
+</div>
 
 </header>
 
-<section class="section" id="prizes">
+<!-- TRACTOR -->
 
-<h2>Thrilling Rewards</h2>
+<div class="tractor">🚜</div>
 
-<div class="podium">
+<!-- SATELLITE -->
 
-<div class="second">₹3000</div>
-<div class="first">₹3000</div>
-<div class="third">₹3000</div>
+<div class="satellite">🛰</div>
 
-</div>
+<!-- GROWING CROPS -->
 
-</section>
+<section class="crops">
 
-<section class="section" id="timeline">
-
-<h2>Event Timeline</h2>
-
-<div class="timeline">
-
-<div><b>Day 1 Morning</b> – Idea Presentation</div>
-<div><b>Day 1 Afternoon</b> – Prototype Development</div>
-<div><b>Day 2 Morning</b> – Testing & Improvements</div>
-<div><b>Day 2 Evening</b> – Final Presentation & Judging</div>
-
-</div>
-
-</section>
-
-<section class="section" id="guidelines">
-
-<h2>Team Size & Guidelines</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Team Size</h3>
-<p>2 – 4 members per team.</p>
-</div>
-
-<div class="card">
-<h3>Rules</h3>
-<p>Students must present working prototype or concept model.</p>
-</div>
-
-<div class="card">
-<h3>Topics</h3>
-<p>Drones and IoT in Agriculture<br>
-Farm Implement Design<br>
-Water Quality Management</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="faq">
-
-<h2>FAQ</h2>
-
-<div class="faq-item">
-<h4>Who can participate?</h4>
-<p>All college students interested in agriculture and technology.</p>
-</div>
-
-<div class="faq-item">
-<h4>Is registration free?</h4>
-<p>Yes registration is free.</p>
-</div>
-
-</section>
-
-<section class="section contact" id="contact">
-
-<h2>Contact</h2>
-
-<p><b>Student Coordinator</b><br>
-S. Christopher – 8220083222</p>
-
-<p><b>Staff Coordinators</b><br>
-Mr. S. Satheesh Kumar – 8489715566<br>
-Dr. G. Kiruthika – 9080497721</p>
+<div class="crop">🌱</div>
+<div class="crop">🌱</div>
+<div class="crop">🌱</div>
+<div class="crop">🌱</div>
 
 </section>
 
 <footer>
 
-Agri Tech 3.0 Hackathon | Innovation for Sustainable Agriculture
+AgriTech 3.0 | Sustainable Agriculture Innovation
 
 </footer>
 
-<script>
-
-/* FLOWER CLICK EFFECT */
-
-document.addEventListener("click",function(e){
-
-for(let i=0;i<8;i++){
-
-let flower=document.createElement("div")
-flower.className="flower"
-flower.innerHTML="🌸"
-
-flower.style.left=(e.pageX+Math.random()*60-30)+"px"
-flower.style.top=(e.pageY+Math.random()*60-30)+"px"
-
-document.body.appendChild(flower)
-
-setTimeout(()=>flower.remove(),2000)
-
-}
-
-})
-
-/* FAQ */
-
-document.querySelectorAll(".faq-item h4").forEach(q=>{
-q.onclick=()=>{
-let p=q.nextElementSibling
-p.style.display=p.style.display==="block"?"none":"block"
-}
-})
-
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
